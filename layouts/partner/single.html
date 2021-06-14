@@ -13,7 +13,7 @@
         <p class="mb-5">{{ .Params.Bio | markdownify }}</p>
         <div class="row">
           <div class="col-md-6 mb-5 mb-md-0">
-            <h4 class="mb-4">{{ i18n "contact_info" | upper}}:</h4>
+            <!-- ><h4 class="mb-4">{{ i18n "contact_info" | upper}}:</h4> -->
             <ul class="list-unstyled">
               {{ range .Params.Contact }}
               <li class="mb-3"><a class="text-color" href="{{ .link | safeURL }}"><i class="{{ .icon }} mr-2"></i>{{ .name }}</a></li>
@@ -21,7 +21,7 @@
             </ul>
           </div>
           <div class="col-md-6">
-            <h4 class="mb-4">{{ i18n "interest" | upper }}</h4>
+            <!-- ><h4 class="mb-4">{{ i18n "interest" | upper }}</h4> -->
             <ul class="list-unstyled">
               {{ range .Params.Interest }}
               <li class="mb-3">{{ . | title }}</li>
@@ -36,9 +36,6 @@
     </div>
 
     <div class="row">
-      <div class="col-12">
-        <h4 class="mb-4">{{ i18n "courses" | upper}}</h4>
-      </div>
       <!-- course item -->
       {{ range where site.RegularPages "Params.partner" .Title }}
       <div class="col-lg-4 col-sm-6 mb-5">
